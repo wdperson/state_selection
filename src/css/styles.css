@@ -1,0 +1,16 @@
+select {
+  width: 540px;
+  height: 34px;
+  border: 0px;
+  outline: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+
+input {
+  border: transparent;
+  width: 540px;
+  height: 34px;
+}
