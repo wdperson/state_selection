@@ -3,7 +3,7 @@ import React from 'react'
 import './css/styles.css'
 const STATES = require('./data/states')
 
-export default class StateSelection extends React.Component {
+export default class Dropdown extends React.Component {
   constructor(props) {
     super(props)
     this.state = {showStates: false}
@@ -48,3 +48,10 @@ export default class StateSelection extends React.Component {
     );
   }
 }
+<div>
+<ul>
+<li>First Item </li>
+<li>Second Item </li>
+<li>Third Item </li>
+</ul>
+</div>
