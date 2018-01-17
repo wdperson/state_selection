@@ -1,17 +1,18 @@
 /* eslint-disable import/default */
 import React from 'react'
 import '../css/styles.css'
+import PropTypes from 'prop-types'
 
 export default class Dropdown extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      selected: this.props.collection[0],
+      selected: this.props.placeholder,
       visible: false
     }
   }
 
-  handleSelected (item) {
+  handleSelected = (item) => (e) => {
     this.setState({
       selected: item,
       visible: false
@@ -19,7 +20,7 @@ export default class Dropdown extends React.Component {
     this.props.onChange(item.label)
   }
 
-  handleVisible () {
+  handleVisible = () => (e) => {
     this.setState({
       visible: !this.state.visible
     })
@@ -29,15 +30,20 @@ export default class Dropdown extends React.Component {
     const {collection} = this.props
     return (
       <div className='dropdown'>
-        <div className='selected_item' onClick={() => this.handleVisible()}>{this.state.selected.label}</div>
+        <div className='selected_item' onClick={this.handleVisible()}>{this.state.selected.label}</div>
         <div className={`dropdown-content ${(this.state.visible ? ' show' : ' hidden')}`}>
           {
             collection.map(item =>
-              <div onClick={() => this.handleSelected(item)} className='item' key={item.value}>{item.label}</div>
+              <div onClick={this.handleSelected(item)} className='item' key={item.value}>{item.label}</div>
             )
           }
         </div>
       </div>
     )
   }
+}
+
+Dropdown.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  collection: PropTypes.array
 }
