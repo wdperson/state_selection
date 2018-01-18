@@ -7,8 +7,6 @@ export default {
   ],
   target: 'web',
   output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
     filename: 'index.js'
   },
   devServer: {
