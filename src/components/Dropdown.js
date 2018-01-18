@@ -44,6 +44,7 @@ export default class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  collection: PropTypes.array,
   onChange: PropTypes.func.isRequired,
-  collection: PropTypes.array
+  placeholder: PropTypes.object
 }
