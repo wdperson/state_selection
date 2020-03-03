@@ -33,6 +33,12 @@ export default class StateSelection extends React.Component {
           />
         </div>
         <div className="bottom-border">
+          <input type="text" placeholder='Permanent Address' value={this.state.address} />
+        </div>
+        <div className="bottom-border">
+          <input type="text" placeholder='Permanent Address (Line 2)' value={this.state.address2} />
+        </div>
+        <div className="bottom-border">
           <input type="text" placeholder='City' value={this.state.city} />
         </div>
         {
@@ -52,24 +58,6 @@ export default class StateSelection extends React.Component {
         }
         <div className="bottom-border">
           <input type="text" placeholder='Zip Code' value={this.state.zip_code} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='Permanent Address' value={this.state.address} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='Permanent Address (Line 2)' value={this.state.address2} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='Country' value={this.state.country2} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='City' value={this.state.city2} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='State' value={this.state.country_state2} />
-        </div>
-        <div className="bottom-border">
-          <input type="text" placeholder='Zip Code' value={this.state.zip_code2} />
         </div>
         <div>
           <input type="submit" value="Submit" />
